@@ -16,7 +16,7 @@ Este é um projeto de uma calculadora de médias desenvolvido como parte do curs
 
 ## Como Usar
 
-### [Acesse pelo link](projeto-calculadora-medias-cy5v81m3s.vercel.app/)
+### [Acesse pelo link](https://projeto-calculadora-medias-ruby-phi.vercel.app)
 
 1. Clone este repositório:
    ```bash
