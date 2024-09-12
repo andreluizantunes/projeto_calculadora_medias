@@ -1,50 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de médias</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatics.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Calculadora de Médias Acadêmicas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="./images_ebac/logo.png" alt="capelo e diploma">
-            <h1>Calculadora de médias</h1>
-        </header>
-        <form id="form-atividade">
-            <input type="text" id="nome-atividade" placeholder="Nome da atividade" required />
-            <input type="number" id="nota-atividade" placeholder="Nota da atividade" min="0" max="10" required />
-            <button type="submit">Adicionar +</button>
+        <h1>Calculadora de Médias Acadêmicas</h1>
+        <form id="gradeForm">
+            <input type="text" id="activity" placeholder="Atividade" required>
+            <input type="number" id="grade" placeholder="Nota" required>
+            <button type="submit">Adicionar</button>
         </form>
-        <table cellspacing="0">
+        <table id="gradesTable">
             <thead>
                 <tr>
-                    <th>
-                        Nome da atividade
-                    </th>
-                    <th>
-                        Nota da atividade
-                    </th>
-                    <th>
-                        Aprovado?
-                    </th>
+                    <th>Atividade</th>
+                    <th>Nota</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- Linhas das atividades serão adicionadas aqui -->
             </tbody>
-            <tfoot>
-                <tr>
-                    <td>Média final</td>
-                    <td id="media-final-valor">---</td>
-                    <td id="media-final-resultado">---</td>
-                </tr>
-            </tfoot>
         </table>
+        <div id="averageContainer">
+            <h2>Média: <span id="average">0.00</span></h2>
+        </div>
+        <div id="chartContainer">
+            <canvas id="gradesChart"></canvas>
+        </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
